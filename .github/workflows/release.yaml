@@ -22,16 +22,9 @@ jobs:
         uses: actions/checkout@v2
         with: { fetch-depth: 0 }
 
-      - name: Setup .NET 6.0
+      - name: Setup .NET 5.0
         uses: actions/setup-dotnet@v1
-        with: { dotnet-version: "6.0.x", include-prerelease: true }
-
-      - name: Setup .NET 6.0 Workloads
-        run: |
-          dotnet workload install android
-
-      - name: Setup MSbuild
-        uses: microsoft/setup-msbuild@v1
+        with: { dotnet-version: "5.0.x" }
 
       - name: Setup NerdBank.GitVersioning
         uses: dotnet/nbgv@v0.4
@@ -39,12 +32,9 @@ jobs:
         with: { setAllVars: true }
 
       - name: Build
+        working-directory: src/AndroidViewGenerator
         run: |
-          msbuild Release.slnf /t:restore,build,pack /nowarn:MSB4011,VSX1000 /p:NoPackageAnalysis=true /verbosity:minimal /p:Configuration=${{ env.configuration }}
-
-      - name: Test
-        run: |
-          dotnet test Release.slnf --no-build
+          dotnet build
 
       - name: Upload NuGet Artifacts
         uses: actions/upload-artifact@v2
