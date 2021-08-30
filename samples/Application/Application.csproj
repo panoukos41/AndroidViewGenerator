@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <_KeepLaunchProfiles>true</_KeepLaunchProfiles>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <!--<CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\layout\fragment_main.xml" />
+    <None Remove="Resources\values\colors.xml" />
+    <None Remove="Resources\values\styles.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AndroidViewGenerator\AndroidViewGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\src\AndroidViewGenerator\GenerateViewAttribute.cs" CopyToOutputDirectory="PreserveNewest" />
+    <AdditionalFiles Include="Resources\layout\*.xml" OutputType="Analyzer" />
+  </ItemGroup>
+
+</Project>

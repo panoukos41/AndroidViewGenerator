@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B2931BB5-78D4-4DB8-AB59-1FE35CEB9998}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F7387393-D44F-40FA-B01C-0E2C2145E151}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "samples\Application\Application.csproj", "{3B318FF7-2694-4119-A479-7D83E5138CE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{1EEBABFC-2F8E-43D2-9AF2-D30DCC928478}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D84B0492-7455-4838-BC36-AD8110DB7B74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{9B4B68A5-D77A-4E88-B150-509ED40A716E}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\release.yaml = .github\workflows\release.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndroidViewGenerator", "src\AndroidViewGenerator\AndroidViewGenerator.csproj", "{3C2A5818-D098-4AFA-B04D-F26EE4EC6A85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B318FF7-2694-4119-A479-7D83E5138CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B318FF7-2694-4119-A479-7D83E5138CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B318FF7-2694-4119-A479-7D83E5138CE9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3B318FF7-2694-4119-A479-7D83E5138CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B318FF7-2694-4119-A479-7D83E5138CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C2A5818-D098-4AFA-B04D-F26EE4EC6A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2A5818-D098-4AFA-B04D-F26EE4EC6A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2A5818-D098-4AFA-B04D-F26EE4EC6A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2A5818-D098-4AFA-B04D-F26EE4EC6A85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B318FF7-2694-4119-A479-7D83E5138CE9} = {F7387393-D44F-40FA-B01C-0E2C2145E151}
+		{D84B0492-7455-4838-BC36-AD8110DB7B74} = {1EEBABFC-2F8E-43D2-9AF2-D30DCC928478}
+		{9B4B68A5-D77A-4E88-B150-509ED40A716E} = {D84B0492-7455-4838-BC36-AD8110DB7B74}
+		{3C2A5818-D098-4AFA-B04D-F26EE4EC6A85} = {B2931BB5-78D4-4DB8-AB59-1FE35CEB9998}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32F70DBC-4DAC-4B96-9EB9-DBD0182FC434}
+	EndGlobalSection
+EndGlobal
