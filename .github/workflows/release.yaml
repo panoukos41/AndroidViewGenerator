@@ -14,13 +14,17 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     outputs:
       nbgv: ${{ steps.nbgv.outputs.SemVer2 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with: { fetch-depth: 0 }
+
+      - name: Setup .NET 6.0
+        uses: actions/setup-dotnet@v1
+        with: { dotnet-version: "6.0.x", include-prerelease: true }
 
       - name: Setup NerdBank.GitVersioning
         uses: dotnet/nbgv@v0.4
