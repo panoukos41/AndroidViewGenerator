@@ -1,4 +1,6 @@
-# AndroidViewGenerator
+# AndroidViewGenerator (Archived)
+
+> Project moved to [ViewBindingsGenerator](https://github.com/panoukos41/ViewBindingsGenerator)
 
 [![Release](https://github.com/panoukos41/AndroidViewGenerator/actions/workflows/release.yaml/badge.svg)](https://github.com/panoukos41/AndroidViewGenerator/actions/workflows/release.yaml)
 [![NuGet](https://buildstats.info/nuget/P41.AndroidViewGenerator?includePreReleases=true)](https://www.nuget.org/packages/P41.AndroidViewGenerator)
